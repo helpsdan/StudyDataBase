@@ -1,0 +1,27 @@
+1) Desenvolva um script que tem como objetivo exibir o nome do banco cadastrado. Esse script deve ter como parâmetro de chamada o código do banco e a partir desse código, deve-se pesquisar se o banco está cadastrado. Em caso positivo, exiba seu nome. Em caso negativo, aborte a execução e exiba a seguinte mensagem de erro : O banco de código <999> não está cadastrado! (Utilize tratamento de exceção adequeado para solucionar este exercício.)
+
+Solução:
+
+=====================================
+
+2)Desenvolva um script que tem como objetivo fazer com que o valor total da coluna tabela de locação do Carloca (LOC_PEDIDO_LOCACAO) esteja de acordo com os itens cadastrados na tabela de item de locação (LOC_ITEM_LOCACAO).
+
+Siga as seguintes regras:
+
+Desenvolva um cursor que deverá ler toda a tabela de pedido de locação. 
+Para cada pedido de locação (selecione o valor total dos itens daquele pedido). Com o valor total do item, compare esse valor com o valor atual do pedido de locação. Caso seja diferente, atualize o valor. Em caso negativo, leia o próximo pedido.
+No final do processamento confirme as alterações realizadas.
+Solução:
+
+=====================================
+
+3) Desenvolva um script que vai receber como parâmetro o código do cliente e retornar os seguintes dados da última locação feita pelo cliente : o código do cliente, o nome do cliente, a data da última locação no formato (dd/mm/yyyy) , o tipo de pagamento feito pelo cliente em extenso (CHEQUE, DINHEIRO, CARTÃO) e o valor da locação ( no formato brasileiro).
+
+Utilize o pacote DBMS_OUTPUT.PUT_LINE para exibir o texto conforme abaixo :
+
+'O cliente' || <cd_cliente>> || ' - ' || <<nm_cliente>> ||  '  fez a última locação em  ' || <<99/99/999>> || ' e o pagamento realizado foi em ' || <<tp_pagamento>> || ' no valor de R$ ' || 999.999,99.
+
+Caso o código do cliente não esteja cadastrado na  tabela, retornar a mensagem  “NÃO EXISTE DADOS DE CLIENTE CADASTRADO !”
+
+Formato brasileiro: select to_char(1234.66,'999G999D99') FROM DUAL;
+Solução:

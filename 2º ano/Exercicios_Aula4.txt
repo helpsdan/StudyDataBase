@@ -1,0 +1,10 @@
+1) Desenvolver um bloco PL/SQL que armazene o resultado do comando select abaixo e imprima os valores utilizando o dbms_output.
+
+Comando: select user, sysdate from dual;
+
+
+2) Desenvolver um bloco PL/SQL que realize a sumarização da pontuação dos clientes existentes na tabela pf0064.cliente_erp.
+
+
+3) Desenvolver um bloco PL/SQL que retorne a quantidade de caracteres ocupados pelos dados da tabela pf0064.cliente_erp.
+

@@ -1,0 +1,36 @@
+1) Desenvolva um script que vai receber como parâmetro o código do grupo de veículo e retornar o código do grupo e o nome do grupo de veículo cadastrado.
+
+Utilize o pacote DBMS_OUTPUT.PUT_LINE para exibir o texto conforme abaixo :
+
+'O código do grupo de veículo ' || <<cd_grupo>> || '  tem a sua descrição como ' || <<ds_grupo>>.
+
+Caso número da placa não esteja cadastrado na  tabela, retornar a mensagem  “NÃO EXISTE DADOS DE GRUPO DE VEÍCULO CADASTRADO !!”
+Solução:
+
+
+
+
+2)	Objetivo: bloco anônimo, tratamento de variáveis e estruturas de controle
+
+Desenvolva um script que vai receber como parâmetro o número da placa do veículo e retornar o número da placa, o nome do proprietário, o modelo do veículo e sua cor.
+
+Utilize o pacote DBMS_OUTPUT.PUT_LINE para exibir o texto conforme abaixo :
+
+'O veículo de placa' || <<nr_placa>> || '  pertence ao proprietário ' || <<nm_proprietario>> ||  '  é do modelo ' || <<modelo>> || ' e tem a cor' || <<cor>>.
+
+Caso número da placa não esteja cadastrado na  tabela, retornar a mensagem  “NÃO EXISTE DADOS DE VEÍCULO CADASTRADO !!”
+Solução:
+
+
+
+
+3)	Objetivo: bloco anônimo, tratamento de variáveis e estruturas de controle
+
+Desenvolva um script que vai receber como parâmetro o código do cliente e retornar o código do cliente, o nome do cliente e o telefone do cliente
+
+Utilize o pacote DBMS_OUTPUT.PUT_LINE para exibir o texto conforme abaixo :
+
+'O cliente' || <cd_cliente>> || ' - ' || <<nm_cliente>> ||  '  possui  o telefone ' || <<num_telefone>>.
+
+Caso o código do cliente não esteja cadastrado na  tabela, retornar a mensagem  “NÃO EXISTE DADOS DE CLIENTE CADASTRADO !!”
+Solução:

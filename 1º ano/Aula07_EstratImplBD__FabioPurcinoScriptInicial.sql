@@ -1,0 +1,91 @@
+
+CREATE TABLE T_AU7_CATEGORIA(
+  cd_categoria INTEGER NOT NULL,
+  nm_categoria VARCHAR(50) NOT NULL,
+  PRIMARY KEY(cd_categoria)
+);
+
+CREATE TABLE T_AU7_PRODUTO(
+  cd_produto INTEGER NOT NULL,
+  tx_descricao VARCHAR(100) NOT NULL,
+  vl_unitario DECIMAL(9,2),
+  cd_categoria INTEGER,
+  PRIMARY KEY(cd_produto),
+  FOREIGN KEY(cd_categoria) REFERENCES T_AU7_CATEGORIA(cd_categoria)
+);
+
+CREATE TABLE T_AU7_CLIENTE(
+  cd_cliente INTEGER NOT NULL,
+  nm_cliente VARCHAR(60),
+  PRIMARY KEY(cd_cliente)
+);
+
+CREATE TABLE T_AU7_PEDIDO(
+  nr_pedido INTEGER NOT NULL,
+  cd_cliente INTEGER NOT NULL,
+  dt_pedido INTEGER NOT NULL,
+  PRIMARY KEY(nr_pedido),
+  FOREIGN KEY(cd_cliente) REFERENCES T_AU7_CLIENTE(cd_cliente)
+);
+
+CREATE TABLE T_AU7_ITEM_PEDIDO(
+  nr_pedido INTEGER NOT NULL,
+  cd_produto INTEGER NOT NULL,
+  vl_quantidade INTEGER NOT NULL,
+  PRIMARY KEY(nr_pedido, cd_produto),
+  FOREIGN KEY(nr_pedido) REFERENCES T_AU7_PEDIDO(nr_pedido),
+  FOREIGN KEY(cd_produto) REFERENCES T_AU7_PRODUTO(cd_produto)
+);
+
+CREATE TABLE T_AU7_DESCONTO(
+  cd_desconto INTEGER NOT NULL,
+  vl_faixa_inicial DECIMAL(9,2),
+  vl_faixa_final DECIMAL(9,2),
+  vl_desconto_maximo DECIMAL(5,2),
+  PRIMARY KEY(cd_desconto)
+);
+
+
+INSERT INTO T_AU7_CATEGORIA VALUES(1,'Tênis');
+INSERT INTO T_AU7_CATEGORIA VALUES(2,'Sapato');
+INSERT INTO T_AU7_CATEGORIA VALUES(3,'Camisetas');
+INSERT INTO T_AU7_CATEGORIA VALUES(4,'Camisas');
+INSERT INTO T_AU7_CATEGORIA VALUES(5,'Bermudas');
+INSERT INTO T_AU7_CATEGORIA VALUES(6,'Agasalhos');
+INSERT INTO T_AU7_CATEGORIA VALUES(7,'Top');
+INSERT INTO T_AU7_CATEGORIA VALUES(8,'Meias');
+INSERT INTO T_AU7_CATEGORIA VALUES(9,'Chuteiras');
+INSERT INTO T_AU7_CATEGORIA VALUES(10,'Bonés');
+
+
+
+INSERT INTO T_AU7_PRODUTO VALUES(1,'New Balance',299.90,1);
+INSERT INTO T_AU7_PRODUTO VALUES(2,'Asics Gel Sparta',259.9,1);
+INSERT INTO T_AU7_PRODUTO VALUES(3,'Mizuno Wave Elevation',139.9,1);
+INSERT INTO T_AU7_PRODUTO VALUES(4,'Puma Scuderia Ferrari',199.9,1);
+INSERT INTO T_AU7_PRODUTO VALUES(5,'Meia Oxer Cano Alto',19.9,8);
+INSERT INTO T_AU7_PRODUTO VALUES(6,'Meia Reebok Sapatilha',15.9,8);
+INSERT INTO T_AU7_PRODUTO VALUES(7,'Meia Track and Field Corrida',49.9,8);
+INSERT INTO T_AU7_PRODUTO VALUES(8,'Chuteira Umbro Speed',59.9,9);
+INSERT INTO T_AU7_PRODUTO VALUES(9,'Chuteira Nike Hypervenom',114.9,9);
+INSERT INTO T_AU7_PRODUTO VALUES(10,'Boné Billabong Trucker',79.9,10);
+INSERT INTO T_AU7_PRODUTO VALUES(11,'Boné Hang Loose Coast',49.9,10);
+INSERT INTO T_AU7_PRODUTO VALUES(12,'Boné Aba reta Oakley factory',79.9,10);
+INSERT INTO T_AU7_PRODUTO VALUES(13,'Sapato social Democrata Sonora Preto',199.9,2);
+INSERT INTO T_AU7_PRODUTO VALUES(14,'Sapato Richards Recorts Caramelho',449.9,2);
+INSERT INTO T_AU7_PRODUTO VALUES(15,'Camiseta Ditz Runner Vermelha',24.9,3);
+INSERT INTO T_AU7_PRODUTO VALUES(16,'Camiseta Puma Entry Trainning',59.9,3);
+INSERT INTO T_AU7_PRODUTO VALUES(17,'Camisa Xadrez Tommy Hilfiger Vermelha',199.9,4);
+INSERT INTO T_AU7_PRODUTO VALUES(18,'Camisa Xadrez Lacoste Marrom e Bege',259.9,4);
+INSERT INTO T_AU7_PRODUTO VALUES(19,'Agasalho Mizuno Chang',259.9,6);
+INSERT INTO T_AU7_PRODUTO VALUES(20,'Agasalho Adidas Chelsea Moletom',359.9,6);
+INSERT INTO T_AU7_PRODUTO VALUES(21,'Tênis Asics Gel Speedstar',299.90,null);
+
+INSERT INTO T_AU7_DESCONTO VALUES (1,40,100,5);
+INSERT INTO T_AU7_DESCONTO VALUES (2,101,1000,7);
+
+
+
+
+
+
