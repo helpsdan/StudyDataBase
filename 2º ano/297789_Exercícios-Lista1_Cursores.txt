@@ -1,6 +1,6 @@
-1) Desenvolva um script que tem como objetivo exibir o nome do banco cadastrado. Esse script deve ter como parâmetro de chamada o código do banco e a partir desse código, deve-se pesquisar se o banco está cadastrado. Em caso positivo, exiba seu nome. Em caso negativo, aborte a execução e exiba a seguinte mensagem de erro : O banco de código <999> não está cadastrado! (Utilize tratamento de exceção adequeado para solucionar este exercício.)
+﻿--1) Desenvolva um script que tem como objetivo exibir o nome do banco cadastrado. Esse script deve ter como parâmetro de chamada o código do banco e a partir desse código, deve-se pesquisar se o banco está cadastrado. Em caso positivo, exiba seu nome. Em caso negativo, aborte a execução e exiba a seguinte mensagem de erro : O banco de código <999> não está cadastrado! (Utilize tratamento de exceção adequeado para solucionar este exercício.)
 
-Solução:
+--Solução:
 
 =====================================
 

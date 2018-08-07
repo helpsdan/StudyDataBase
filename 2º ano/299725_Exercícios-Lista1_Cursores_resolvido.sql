@@ -1,6 +1,6 @@
-﻿1) Desenvolva um script que tem como objetivo exibir o nome do banco cadastrado. Esse script deve ter como parâmetro de chamada o código do banco e a partir desse código, deve-se pesquisar se o banco está cadastrado. Em caso positivo, exiba seu nome. Em caso negativo, aborte a execução e exiba a seguinte mensagem de erro : O banco de código <999> não está cadastrado! (Utilize tratamento de exceção adequeado para solucionar este exercício.)
+﻿-- 1) Desenvolva um script que tem como objetivo exibir o nome do banco cadastrado. Esse script deve ter como parâmetro de chamada o código do banco e a partir desse código, deve-se pesquisar se o banco está cadastrado. Em caso positivo, exiba seu nome. Em caso negativo, aborte a execução e exiba a seguinte mensagem de erro : O banco de código <999> não está cadastrado! (Utilize tratamento de exceção adequeado para solucionar este exercício.)
 
-Solução:
+-- Solução:
 declare
      v_codigo   loc_banco.cd_banco%type := '&CodigoBanco';
      v_nome     loc_banco.nm_banco%type;
@@ -23,15 +23,15 @@ end;
 
 =====================================
 
-2)Desenvolva um script que tem como objetivo fazer com que o valor total da coluna tabela de locação do Carloca (LOC_PEDIDO_LOCACAO) esteja de acordo com os itens cadastrados na tabela de item de locação (LOC_ITEM_LOCACAO).
+-- 2)Desenvolva um script que tem como objetivo fazer com que o valor total da coluna tabela de locação do Carloca (LOC_PEDIDO_LOCACAO) esteja de acordo com os itens cadastrados na tabela de item de locação (LOC_ITEM_LOCACAO).
 
-Siga as seguintes regras:
-
+-- Siga as seguintes regras:
+/*
 Desenvolva um cursor que deverá ler toda a tabela de pedido de locação. 
 Para cada pedido de locação (selecione o valor total dos itens daquele pedido). Com o valor total do item, compare esse valor com o valor atual do pedido de locação. Caso seja diferente, atualize o valor. Em caso negativo, leia o próximo pedido.
 No final do processamento confirme as alterações realizadas.
 Solução:
-
+*/
 
 select * from loc_pedido_locacao where nr_pedido=1148
 
@@ -82,7 +82,7 @@ exception
 end;
 =====================================
 
-3) Desenvolva um script que vai receber como parâmetro o código do cliente e retornar os seguintes dados da última locação feita pelo cliente : o código do cliente, o nome do cliente, a data da última locação no formato (dd/mm/yyyy) , o tipo de pagamento feito pelo cliente em extenso (CHEQUE, DINHEIRO, CARTÃO) e o valor da locação ( no formato brasileiro).
+/*3) Desenvolva um script que vai receber como parâmetro o código do cliente e retornar os seguintes dados da última locação feita pelo cliente : o código do cliente, o nome do cliente, a data da última locação no formato (dd/mm/yyyy) , o tipo de pagamento feito pelo cliente em extenso (CHEQUE, DINHEIRO, CARTÃO) e o valor da locação ( no formato brasileiro).
 
 Utilize o pacote DBMS_OUTPUT.PUT_LINE para exibir o texto conforme abaixo :
 
@@ -92,7 +92,7 @@ Caso o código do cliente não esteja cadastrado na  tabela, retornar a mensagem
 
 Formato brasileiro: select to_char(1234.66,'999G999D99') FROM DUAL;
 Solução:
-
+*/
 
 declare
     v_cd_cliente    loc_cliente.cd_cliente%type := &CodigoCliente;

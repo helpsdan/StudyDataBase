@@ -1,4 +1,4 @@
-Desenvolver um bloco PL/SQL que imprima os dados de clientes da tabela LOC_CLIENTE. Obs.: retornar somente clientes do tipo pessoa física.
+﻿-- Desenvolver um bloco PL/SQL que imprima os dados de clientes da tabela LOC_CLIENTE. Obs.: retornar somente clientes do tipo pessoa física.
 
 declare
 	cursor c_cliente is
